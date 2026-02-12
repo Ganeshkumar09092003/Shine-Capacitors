@@ -1,0 +1,215 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Rajdhani:wght@500;600;700&family=Roboto+Mono:wght@400;500&display=swap');
+@import "tailwindcss";
+
+/* ===== THEME CONFIGURATION ===== */
+@theme {
+    /* Color Palette - Industrial Cyber-Electric */
+    --color-bg-void: #020405;
+    /* Deepest Black */
+    --color-bg-panel: #0B1015;
+    /* Dark Blue-Grey Metal */
+    --color-cyan-neon: #00E5FF;
+    /* Arc Blue (Primary) */
+    --color-blue-electric: #007BFF;
+    /* High Voltage (Secondary) */
+    --color-alert-red: #FF2A6D;
+    /* Danger/Alert */
+
+    /* Text Colors */
+    --color-text-primary: #FFFFFF;
+    --color-text-secondary: #94A3B8;
+    /* Slate Grey */
+    --color-text-dim: #475569;
+
+    /* Legacy Mappings */
+    --color-brand-glow-light: var(--color-cyan-neon);
+    --color-brand-glow-mid: var(--color-blue-electric);
+    --color-brand-deep: var(--color-bg-panel);
+}
+
+/* ===== BASE STYLES ===== */
+body {
+    background-color: var(--color-bg-void);
+    color: var(--color-text-primary);
+    font-family: 'Inter', sans-serif;
+    overflow-x: hidden;
+    line-height: 1.6;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Rajdhani', sans-serif;
+    color: var(--color-text-primary);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+code,
+pre,
+.font-mono {
+    font-family: 'Roboto Mono', monospace;
+}
+
+/* ===== UTILITIES ===== */
+
+/* Technical Glass */
+.glass-technical {
+    background: rgba(11, 16, 21, 0.6);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(0, 229, 255, 0.1);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+
+.glass-technical:hover {
+    border-color: rgba(0, 229, 255, 0.3);
+    box-shadow: 0 0 15px rgba(0, 229, 255, 0.1);
+}
+
+/* Cyber Borders */
+.border-cyber {
+    border: 1px solid rgba(0, 229, 255, 0.2);
+    position: relative;
+}
+
+.border-cyber::before {
+    content: '';
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    width: 10px;
+    height: 10px;
+    border-top: 2px solid var(--color-cyan-neon);
+    border-left: 2px solid var(--color-cyan-neon);
+    opacity: 0.6;
+}
+
+.border-cyber::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    right: -1px;
+    width: 10px;
+    height: 10px;
+    border-bottom: 2px solid var(--color-cyan-neon);
+    border-right: 2px solid var(--color-cyan-neon);
+    opacity: 0.6;
+}
+
+/* Neon Text */
+.text-glow-blue {
+    text-shadow: 0 0 10px rgba(0, 229, 255, 0.6);
+}
+
+.text-glow-white {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.4);
+}
+
+/* Animations */
+@keyframes flicker {
+
+    0%,
+    19.999%,
+    22%,
+    62.999%,
+    64%,
+    64.999%,
+    70%,
+    100% {
+        opacity: 0.99;
+    }
+
+    20%,
+    21.999%,
+    63%,
+    63.999%,
+    65%,
+    69.999% {
+        opacity: 0.4;
+    }
+}
+
+.animate-flicker {
+    animation: flicker 4s infinite;
+}
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.animate-float {
+    animation: float 6s ease-in-out infinite;
+}
+
+@keyframes spin-slow {
+    from {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+
+    to {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+.animate-spin-slow {
+    animation: spin-slow 20s linear infinite;
+}
+
+@keyframes spin-slow-reverse {
+    from {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+
+    to {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+}
+
+.animate-spin-slow-reverse {
+    animation: spin-slow-reverse 15s linear infinite;
+}
+
+@keyframes spin-up {
+    0% {
+        transform: scale(0.95);
+        opacity: 0;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.animate-spin-up {
+    animation: spin-up 0.4s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--color-bg-void);
+}
+
+::-webkit-scrollbar-thumb {
+    background: #1e293b;
+    border: 1px solid var(--color-cyan-neon);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--color-cyan-neon);
+}
