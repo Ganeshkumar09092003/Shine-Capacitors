@@ -1,6 +1,6 @@
 import React from 'react';
 import { COMPANY_INFO } from '../constants';
-import logo from '../assets/logo5.png';
+const logo = "https://res.cloudinary.com/duvo27ycs/image/upload/v1770919250/logo5_kqfxso.png";
 
 const Footer = () => {
     const currentYear = new Date().getFullYear();
