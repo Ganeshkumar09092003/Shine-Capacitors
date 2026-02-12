@@ -7,7 +7,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 const FeatureCard = ({ feature, index }) => {
     return (
-        <div className="feature-card glass-panel p-8 group hover-lift transition-all duration-500 opacity-0 translate-y-8">
+        <div className="feature-card glass-panel p-8 group hover-lift transition-all duration-500 opacity-0 translate-y-8 flex flex-col items-center text-center lg:items-start lg:text-left">
             <div className="w-16 h-16 rounded-2xl bg-white/5 flex items-center justify-center mb-6 group-hover:bg-brand-deep/20 group-hover:scale-110 transition-all duration-300 border border-white/5 group-hover:border-brand-glow-mid/30">
                 <span className="material-symbols-outlined text-3xl text-brand-glow-mid group-hover:text-brand-glow-light transition-colors drop-shadow-[0_0_8px_rgba(112,224,0,0.5)]">
                     {feature.icon}
@@ -72,7 +72,7 @@ const WhyChooseUsSection = () => {
 
                 <div className="mt-16 grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
                     {benefits.map((item, index) => (
-                        <div key={index} className="glass-panel flex items-center gap-4 p-5 hover:bg-white/5 transition-all duration-300 cursor-default border-l-2 border-transparent hover:border-l-brand-glow-mid">
+                        <div key={index} className="glass-panel flex items-center justify-center lg:justify-start gap-4 p-5 hover:bg-white/5 transition-all duration-300 cursor-default border-l-2 border-transparent hover:border-l-brand-glow-mid">
                             <span className="material-symbols-outlined text-2xl text-brand-glow-mid animate-float-slow" style={{ animationDelay: `${index * 0.5}s` }}>
                                 {item.icon}
                             </span>

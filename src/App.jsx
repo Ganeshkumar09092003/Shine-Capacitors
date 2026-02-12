@@ -2,6 +2,7 @@ import React from 'react';
 import { BrowserRouter, Routes, Route, useParams } from 'react-router-dom';
 import Header from './components/Header';
 import Footer from './components/Footer';
+import { PRODUCTS } from './constants';
 // Lazy load components
 const LandingPage = React.lazy(() => import('./components/LandingPage'));
 const ProductPage = React.lazy(() => import('./components/ProductPage'));
@@ -28,7 +29,14 @@ const ProductPageWrapper = () => {
     return <ProductPage product={product} />;
 };
 
+export const HeaderContext = React.createContext({
+    isVisible: true,
+    setIsVisible: () => { }
+});
+
 const App = () => {
+    const [isHeaderVisible, setIsHeaderVisible] = React.useState(true);
+
     // Scroll to top on mount (refresh/load)
     React.useEffect(() => {
         window.scrollTo(0, 0);
@@ -41,18 +49,20 @@ const App = () => {
 
     return (
         <BrowserRouter>
-            <div className="flex flex-col min-h-screen bg-bg-void text-text-primary">
-                <Header />
-                <main className="flex-grow">
-                    <React.Suspense fallback={<PageLoader />}>
-                        <Routes>
-                            <Route path="/" element={<LandingPage />} />
-                            <Route path="/product/:productId" element={<ProductPageWrapper />} />
-                        </Routes>
-                    </React.Suspense>
-                </main>
-                <Footer />
-            </div>
+            <HeaderContext.Provider value={{ isVisible: isHeaderVisible, setIsVisible: setIsHeaderVisible }}>
+                <div className="flex flex-col min-h-screen bg-bg-void text-text-primary">
+                    <Header />
+                    <main className="flex-grow">
+                        <React.Suspense fallback={<PageLoader />}>
+                            <Routes>
+                                <Route path="/" element={<LandingPage />} />
+                                <Route path="/product/:productId" element={<ProductPageWrapper />} />
+                            </Routes>
+                        </React.Suspense>
+                    </main>
+                    <Footer />
+                </div>
+            </HeaderContext.Provider>
         </BrowserRouter >
     );
 };

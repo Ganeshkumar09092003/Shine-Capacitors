@@ -44,7 +44,7 @@ const ProductsSection = () => {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
 
                 {/* Compact Header */}
-                <div ref={titleRef} className="flex flex-col items-start md:items-center text-center mb-16 relative">
+                <div ref={titleRef} className="flex flex-col items-center text-center mb-16 relative">
                     <div className="flex items-center gap-4 mb-4">
                         <div className="h-[1px] w-12 bg-cyan-neon/50"></div>
                         <span className="text-cyan-neon text-xs font-mono tracking-[0.3em] uppercase">CATALOG_2026</span>
@@ -83,6 +83,8 @@ const ProductsSection = () => {
                                 <img
                                     src={product.image}
                                     alt={product.name}
+                                    loading="lazy"
+                                    decoding="async"
                                     className="max-h-full max-w-full object-contain drop-shadow-2xl group-hover:scale-110 transition-transform duration-500 ease-out will-change-transform"
                                 />
                             </div>

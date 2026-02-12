@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import capacitorVideo from '../assets/Capacitor_video.mp4';
-import logo from '../assets/logo5.png';
+const capacitorVideo = "https://res.cloudinary.com/duvo27ycs/image/upload/v1770919936/ezgif.com-video-to-webp-converter_2_t1fdky.webp";
+const logo = "https://res.cloudinary.com/duvo27ycs/image/upload/v1770919250/logo5_kqfxso.png";
 
-const IntroOverlay = ({ onComplete }) => {
+const IntroOverlay = ({ onComplete, onTransitionStart }) => {
     const [progress, setProgress] = useState(0);
     const [isFadingOut, setIsFadingOut] = useState(false);
     const [bootText, setBootText] = useState([]);
@@ -41,6 +41,7 @@ const IntroOverlay = ({ onComplete }) => {
         // Completion timer
         const timer = setTimeout(() => {
             setIsFadingOut(true);
+            if (onTransitionStart) onTransitionStart(); // Trigger start of next scene
             setTimeout(onComplete, 800); // Wait for fade out animation
         }, 3500); // Total duration
 
@@ -49,24 +50,16 @@ const IntroOverlay = ({ onComplete }) => {
             clearInterval(textInterval);
             clearTimeout(timer);
         };
-    }, [onComplete]);
+    }, [onComplete, onTransitionStart]);
 
     return (
         <div
             className={`fixed inset-0 z-[100] bg-bg-void flex flex-col items-center justify-center transition-opacity duration-800 ${isFadingOut ? 'opacity-0 pointer-events-none' : 'opacity-100'}`}
         >
             {/* Background Video/Image */}
-            <div className="absolute inset-0 z-0 overflow-hidden">
-                <video
-                    src={capacitorVideo}
-                    autoPlay
-                    loop
-                    muted
-                    playsInline
-                    className="w-full h-full object-cover opacity-20 scale-105"
-                />
-                <div className="absolute inset-0 bg-bg-void/80" />
-                <div className="absolute inset-0 bg-[linear-gradient(rgba(0,229,255,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(0,229,255,0.05)_1px,transparent_1px)] bg-[size:20px_20px]"></div>
+            {/* Preload Hero Video/Image */}
+            <div style={{ position: 'absolute', width: 0, height: 0, overflow: 'hidden', opacity: 0 }}>
+                <img src={capacitorVideo} alt="preload" />
             </div>
 
             {/* Content Container */}
@@ -78,7 +71,9 @@ const IntroOverlay = ({ onComplete }) => {
                     <img
                         src={logo}
                         alt="Shine Capacitors"
-                        className="h-24 w-auto object-contain  relative z-10"
+                        loading="eager"
+                        decoding="async"
+                        className="h-24 w-auto object-contain relative z-10"
                     />
                 </div>
 

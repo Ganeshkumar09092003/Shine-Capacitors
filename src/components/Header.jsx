@@ -1,13 +1,18 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { NAV_LINKS } from '../constants';
-import logo from '../assets/logo5.png';
+const logo = "https://res.cloudinary.com/duvo27ycs/image/upload/v1770919250/logo5_kqfxso.png";
+// Import the context effectively (assuming it's exported from App.jsx or similar, but for now accessing via relative import if circular dep avoided, or just expecting it)
+import { HeaderContext } from '../App';
 
 const Header = () => {
     const navigate = useNavigate();
     const location = useLocation();
     const [isScrolled, setIsScrolled] = useState(false);
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+    // Consume context, default to visible if context missing (safety)
+    const { isVisible } = useContext(HeaderContext) || { isVisible: true };
 
     useEffect(() => {
         let ticking = false;
@@ -55,9 +60,10 @@ const Header = () => {
 
     return (
         <header
-            className={`fixed top-0 z-50 w-full transition-all duration-500 ${isScrolled
-                ? 'bg-bg-void/90 border-b border-cyan-neon/20 backdrop-blur-md py-2'
-                : 'bg-transparent py-6'
+            className={`fixed top-0 z-50 w-full transition-all duration-1000 transform ${isVisible ? 'translate-y-0 opacity-100' : '-translate-y-full opacity-0'
+                } ${isScrolled
+                    ? 'bg-bg-void/90 border-b border-cyan-neon/20 backdrop-blur-md py-2'
+                    : 'bg-transparent py-6'
                 }`}
         >
             <div className="max-w-7xl mx-auto px-4 sm:px-6 flex items-center justify-between relative">
@@ -77,7 +83,7 @@ const Header = () => {
                         <div className="absolute top-0 left-0 w-2 h-2 border-t border-l border-cyan-neon"></div>
                         <div className="absolute bottom-0 right-0 w-2 h-2 border-b border-r border-cyan-neon"></div>
 
-                        <img src={logo} alt="Shine Capacitors" className='h-8 sm:h-10 w-auto object-contain' />
+                        <img src={logo} alt="Shine Capacitors" loading="eager" decoding="async" className='h-8 sm:h-10 w-auto object-contain' />
                     </div>
                 </Link>
 
