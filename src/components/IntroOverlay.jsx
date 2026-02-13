@@ -5,28 +5,9 @@ const logo = "https://res.cloudinary.com/duvo27ycs/image/upload/v1770919250/logo
 const IntroOverlay = ({ onComplete, onTransitionStart }) => {
     const [progress, setProgress] = useState(0);
     const [isFadingOut, setIsFadingOut] = useState(false);
-    const [bootText, setBootText] = useState([]);
 
-    const bootLines = [
-        "INITIALIZING CORE SYSTEM...",
-        "CHECKING CAPACITOR INTEGRITY...",
-        "LOADING DIELECTRIC MODULES...",
-        "POWER FACTOR CORRECTION: OK",
-        "ESTABLISHING SECURE CONNECTION...",
-    ];
 
     useEffect(() => {
-        // Boot text sequence
-        let lineIndex = 0;
-        const textInterval = setInterval(() => {
-            if (lineIndex < bootLines.length) {
-                setBootText(prev => [...prev, bootLines[lineIndex]]);
-                lineIndex++;
-            } else {
-                clearInterval(textInterval);
-            }
-        }, 500);
-
         // Progress bar animation
         const interval = setInterval(() => {
             setProgress(prev => {
@@ -47,7 +28,7 @@ const IntroOverlay = ({ onComplete, onTransitionStart }) => {
 
         return () => {
             clearInterval(interval);
-            clearInterval(textInterval);
+
             clearTimeout(timer);
         };
     }, [onComplete, onTransitionStart]);
@@ -77,21 +58,12 @@ const IntroOverlay = ({ onComplete, onTransitionStart }) => {
                     />
                 </div>
 
-                {/* Loading Text */}
-                <div className="flex flex-col items-start gap-1 mb-8 w-full font-mono text-xs sm:text-sm text-cyan-neon/80 h-32 overflow-hidden border border-cyan-neon/20 p-4 bg-bg-panel/50 backdrop-blur-sm rounded-sm">
-                    {bootText.map((line, index) => (
-                        <div key={index} className="typewriter">
-                            <span className="text-white mr-2">root@shine-sys:~#</span>
-                            {line}
-                        </div>
-                    ))}
-                    <div className="animate-flicker">_</div>
-                </div>
+
 
                 {/* Progress Bar */}
                 <div className="w-full mb-2">
                     <div className="flex justify-between text-xs font-mono text-cyan-neon mb-1">
-                        <span>SYSTEM LOAD</span>
+                        <span>Loading...</span>
                         <span>{progress}%</span>
                     </div>
                     <div className="w-full h-2 bg-bg-panel border border-cyan-neon/30 rounded-full overflow-hidden">
@@ -105,10 +77,7 @@ const IntroOverlay = ({ onComplete, onTransitionStart }) => {
                 </div>
 
                 {/* Decorative Tech Elements */}
-                <div className="absolute bottom-[-50px] left-0 right-0 flex justify-between text-[10px] text-text-dim font-mono uppercase tracking-widest px-2">
-                    <span>SECURE BOOT ENABLED</span>
-                    <span>VER 2.5.0-ALPHA</span>
-                </div>
+
             </div>
         </div>
     );

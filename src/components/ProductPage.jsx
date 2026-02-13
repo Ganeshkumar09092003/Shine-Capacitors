@@ -115,7 +115,7 @@ const ProductPage = ({ product }) => {
                                             <th className="px-6 py-5">Dimensions (mm)</th>
                                             {product.detailedSpecs[0]?.voltage && <th className="px-6 py-5">Voltage</th>}
                                             {product.detailedSpecs[0]?.tempRange && <th className="px-6 py-5">Temp Range</th>}
-                                            {product.detailedSpecs[0]?.application && <th className="px-6 py-5">Application</th>}
+
                                         </tr>
                                     </thead>
                                     <tbody className="divide-y divide-white/5">
@@ -126,7 +126,7 @@ const ProductPage = ({ product }) => {
                                                 <td className="px-6 py-5 text-text-secondary font-mono text-xs">{row.dimensions}</td>
                                                 {row.voltage && <td className="px-6 py-5 text-text-secondary">{row.voltage}</td>}
                                                 {row.tempRange && <td className="px-6 py-5 text-text-secondary">{row.tempRange}</td>}
-                                                {row.application && <td className="px-6 py-5 text-text-secondary group-hover:text-white transition-colors">{row.application}</td>}
+
                                             </tr>
                                         ))}
                                     </tbody>

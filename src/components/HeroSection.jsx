@@ -148,13 +148,13 @@ const HeroSection = ({ startAnimation = false, onReveal }) => {
                             </span>
                         </button>
 
-                        <button
+                        {/* <button
                             onClick={() => window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' })}
                             className="group relative px-6 py-4 text-xs font-mono tracking-[0.2em] text-gray-400 uppercase hover:text-white transition-colors duration-300"
                         >
                             <span className="relative z-10">Documentation</span>
                             <div className="absolute bottom-0 left-0 w-0 h-[1px] bg-cyan-neon group-hover:w-full transition-all duration-500 ease-out"></div>
-                        </button>
+                        </button> */}
                     </div>
                 </div>
 

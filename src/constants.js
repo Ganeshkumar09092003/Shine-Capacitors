@@ -1,7 +1,7 @@
 // Import images for Vite bundling
 const FanCapacitorImg = "https://res.cloudinary.com/duvo27ycs/image/upload/v1770919177/Fan-Capacitor_moc16t.png";
 const MotorRunCapacitorImg = "https://res.cloudinary.com/duvo27ycs/image/upload/v1770919263/Motor-Run-Capacitor_o5wdoc.png";
-const LightingCapacitorImg = "https://res.cloudinary.com/duvo27ycs/image/upload/v1770919242/Lighting-Capacitor_sd5rcw.png";
+const AirConditionerCapacitorImg = "https://res.cloudinary.com/duvo27ycs/image/upload/v1770979041/Gemini_Generated_Image_oxgkwboxgkwboxgk_mj6dud.png";
 const HeavyDutyCapacitorImg = "https://res.cloudinary.com/duvo27ycs/image/upload/v1770919234/Heavy-Duty-Capacitor_od8kdh.png";
 
 export const COMPANY_INFO = {
@@ -125,38 +125,35 @@ export const PRODUCTS = [
         ]
     },
     {
-        id: 'lighting-capacitor',
-        name: 'Lighting Capacitor',
-        category: 'Lighting',
-        standard: 'As per IS 1569 : 1976',
-        description: 'Specialized capacitors for fluorescent and discharge lamps. Ensures power factor correction and extends lamp life with stable operation.',
-        image: LightingCapacitorImg,
+        id: 'air-conditioner-capacitor',
+        name: 'Air Conditioner Capacitor',
+        category: 'Air Conditioner',
+        standard: 'Rated voltage 440 VAC',
+        description: 'High-performance capacitors designed for air conditioning units and heavy-duty motors. Ensures reliable starting and running operation under demanding conditions.',
+        image: AirConditionerCapacitorImg,
         features: [
-            'IS 1569:1976 Standard Compliance',
-            'Dual Voltage Rating (400/250 VAC)',
-            'Power Factor Correction',
-            'Low Loss Design',
-            'Flame Retardant Case',
-            'Quick Connect Terminals',
-            'Suitable for Fluorescent Lamps',
-            'Extended Temperature Range'
+            'High Reliability & Safety',
+            'Rated Voltage: 440 VAC',
+            'Tolerance: ±5%',
+            'Self-Healing Properties',
+            'Low Dissipation Factor',
+            'Explosion-proof Design',
+            'Wide Temperature Range',
+            'Long Operational Life'
         ],
         specs: [
-            { label: 'Standard', value: 'IS 1569:1976' },
-            { label: 'Rated Voltage', value: '400 VAC / 250 VAC' },
-            { label: 'Tolerance (400V)', value: '±5%' },
-            { label: 'Tolerance (250V)', value: '±10%' },
+            { label: 'Rated Voltage', value: '440 VAC' },
+            { label: 'Tolerance', value: '±5%' },
+            { label: 'Frequency', value: '50/60 Hz' },
+            { label: 'Application', value: 'AC Units, Motors' },
         ],
         detailedSpecs: [
-            { capacitance: '3.15', voltage: '400 VAC', tolerance: '±5%', dimensions: '28 × 52', tempRange: '-25°C to +85°C', application: 'FTL 2 Nos. of 40 watts' },
-            { capacitance: '4.00', voltage: '250 VAC', tolerance: '±5%', dimensions: '28 × 52', tempRange: '-25°C to +85°C', application: 'FTL 1 No. Of 33 Watts' },
-            { capacitance: '5.70', voltage: '400 VAC', tolerance: '±5%', dimensions: '28 × 52', tempRange: '-25°C to +85°C', application: 'FTL 1 No. 65W / HPMV 1 No. 80W' },
-            { capacitance: '8.00', voltage: '250 VAC', tolerance: '±5%', dimensions: '35 × 55', tempRange: '-25°C to +85°C', application: 'LPSV 1 No. of 33 Watts' },
-            { capacitance: '10.00', voltage: '250 VAC', tolerance: '±5%', dimensions: '35 × 55', tempRange: '-25°C to +85°C', application: 'HPMV 1 No. 125W / HPSV 1 No. 70W' },
-            { capacitance: '15.00', voltage: '250 VAC', tolerance: '±5%', dimensions: '40 × 71', tempRange: '-25°C to +85°C', application: 'HPMV 1 No. 250 Watts' },
-            { capacitance: '20.00', voltage: '250 VAC', tolerance: '±5%', dimensions: '40 × 71', tempRange: '-25°C to +85°C', application: 'HPMV 1 No. 400W / HPSV 1 No. 150W' },
-            { capacitance: '33.00', voltage: '250 VAC', tolerance: '±5%', dimensions: '45 × 95', tempRange: '-25°C to +85°C', application: 'HPSV 1 No. 250 Watts' },
-            { capacitance: '42.00', voltage: '250 VAC', tolerance: '±5%', dimensions: '45 × 95', tempRange: '-25°C to +85°C', application: 'HPSV 1 No. 400 Watts' },
+            { capacitance: '15.00', tolerance: '±5%', dimensions: '40 × 71', application: '1/2 HP Monoblock Pump' },
+            { capacitance: '20.00', tolerance: '±5%', dimensions: '40 × 95', application: '1.5 HP Monoblock Pump' },
+            { capacitance: '25.00', tolerance: '±5%', dimensions: '45 × 95', application: '1 HP Jet Pump & 1 Ton AC Unit' },
+            { capacitance: '36.00', tolerance: '±5%', dimensions: '50 × 120', application: '1.5 Ton AC Unit' },
+            { capacitance: '45.00', tolerance: '±5%', dimensions: '50 × 120', application: '2 Ton AC Unit' },
+            { capacitance: '50.00', tolerance: '±5%', dimensions: '50 × 120', application: 'Heavy Duty Motors' },
         ]
     },
     {
