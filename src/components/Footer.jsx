@@ -73,12 +73,8 @@ const Footer = () => {
                 </div>
 
                 {/* Bottom Bar */}
-                <div className="mt-10 pt-6 border-t border-white/5 flex flex-col sm:flex-row justify-between items-center gap-4 text-[10px] sm:text-xs text-text-secondary/50 font-mono uppercase tracking-wider">
-                    <p>© {currentYear} {COMPANY_INFO.name}. All Systems Nominal.</p>
-                    <div className="flex gap-4">
-                        <a href="#" className="hover:text-cyan-neon transition-colors">Privacy Protocol</a>
-                        <a href="#" className="hover:text-cyan-neon transition-colors">Terms of Op</a>
-                    </div>
+                <div className="mt-10 pt-6 border-t border-white/5 flex flex-col sm:flex-row justify-center items-center gap-4 text-[10px] sm:text-xs text-text-secondary/50 font-mono uppercase tracking-wider">
+                    <p>© {currentYear} {COMPANY_INFO.name}.</p>
                 </div>
             </div>
         </footer>
