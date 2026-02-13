@@ -147,9 +147,9 @@ const Header = () => {
                         <a
                             href="/#contact"
                             onClick={(e) => handleNavClick(e, '/#contact', 'contact')}
-                            className="text-lg font-bold text-cyan-neon hover:text-white hover:bg-cyan-neon/20 py-4 px-6 border-l-2 border-cyan-neon transition-all font-mono tracking-widest mt-2 bg-cyan-neon/5"
+                            className="text-lg font-bold text-text-primary hover:text-cyan-neon hover:bg-cyan-neon/10 py-4 px-6 border-l-2 border-transparent hover:border-cyan-neon transition-all font-mono tracking-widest mt-2"
                         >
-                            CONTACT // US
+                            Contact Us
                         </a>
                     </div>
                 </div>
