@@ -69,8 +69,8 @@ export const PRODUCTS = [
         ],
         specs: [
             { label: 'Standard', value: 'IS 1709:1984' },
+            { label: 'Capacitance', value: '1.25 - 4.00 µF' },
             { label: 'Rated Voltage', value: '440 VAC' },
-            { label: 'Tolerance', value: '±5%' },
             { label: 'Temperature Range', value: '-25°C to +85°C' },
         ],
         detailedSpecs: [
@@ -85,75 +85,6 @@ export const PRODUCTS = [
             { capacitance: '3.15', tolerance: '±5%', dimensions: '30 × 52', application: 'Heavy Duty Fans' },
             { capacitance: '3.50', tolerance: '±5%', dimensions: '30 × 52', application: 'Heavy Duty Fans' },
             { capacitance: '4.00', tolerance: '±5%', dimensions: '30 × 52', application: 'Heavy Duty Fans' },
-        ]
-    },
-    {
-        id: 'motor-run-capacitor',
-        name: 'Motor Run Capacitor',
-        category: 'Motor Run',
-        standard: 'Rated voltage 440 VAC',
-        description: 'Heavy-duty motor run capacitors for single-phase AC motors in pumps, compressors, and industrial machinery. Engineered for continuous duty cycles.',
-        image: MotorRunCapacitorImg,
-        features: [
-            'Rated Voltage: 440 VAC',
-            'Tolerance: ±5%',
-            'Heavy-duty Construction',
-            'High Capacitance Range',
-            'Wire Lead & Lug Termination',
-            'UV Resistant Enclosure',
-            'Low ESR for Efficiency',
-            'Continuous Duty Rating'
-        ],
-        specs: [
-            { label: 'Rated Voltage', value: '440 VAC' },
-            { label: 'Capacitance Range', value: '4.00 - 50.00 µF' },
-            { label: 'Tolerance', value: '±5%' },
-            { label: 'Operating Temp', value: '-40°C to +85°C' },
-        ],
-        detailedSpecs: [
-            { capacitance: '4.00', tolerance: '±5%', dimensions: '35 × 55', application: 'Coller Motors 0.25 H.P.' },
-            { capacitance: '6.00', tolerance: '±5%', dimensions: '55 × 55', application: 'Coller Motors 0.25 H.P.' },
-            { capacitance: '8.00', tolerance: '±5%', dimensions: '35 × 71', application: 'Cooler Motors 0.50 H.P / Exhaust Fans' },
-            { capacitance: '10.00', tolerance: '±5%', dimensions: '36 × 71', application: '1/2 HP Monoblock & Low head pump' },
-            { capacitance: '12.50', tolerance: '±5%', dimensions: '35 × 71', application: '1/2 HP Self Priming pump' },
-            { capacitance: '15.00', tolerance: '±5%', dimensions: '40 × 71', application: '1/2 HP Monoblock pump' },
-            { capacitance: '20.00', tolerance: '±5%', dimensions: '40 × 95', application: '1.5 HP Monoblock Pump' },
-            { capacitance: '25.00', tolerance: '±5%', dimensions: '45 × 95', application: '1 HP jet pump & 1 Ton AC Unit' },
-            { capacitance: '36.00', tolerance: '±5%', dimensions: '50 × 120', application: '1.5 Ton AC Unit' },
-            { capacitance: '45.00', tolerance: '±5%', dimensions: '50 × 120', application: '2 Ton AC Unit' },
-            { capacitance: '50.00', tolerance: '±5%', dimensions: '50 × 120', application: 'Heavy Duty Motors' },
-        ]
-    },
-    {
-        id: 'air-conditioner-capacitor',
-        name: 'Air Conditioner Capacitor',
-        category: 'Air Conditioner',
-        standard: 'Rated voltage 440 VAC',
-        description: 'High-performance capacitors designed for air conditioning units and heavy-duty motors. Ensures reliable starting and running operation under demanding conditions.',
-        image: AirConditionerCapacitorImg,
-        features: [
-            'High Reliability & Safety',
-            'Rated Voltage: 440 VAC',
-            'Tolerance: ±5%',
-            'Self-Healing Properties',
-            'Low Dissipation Factor',
-            'Explosion-proof Design',
-            'Wide Temperature Range',
-            'Long Operational Life'
-        ],
-        specs: [
-            { label: 'Rated Voltage', value: '440 VAC' },
-            { label: 'Tolerance', value: '±5%' },
-            { label: 'Frequency', value: '50/60 Hz' },
-            { label: 'Application', value: 'AC Units, Motors' },
-        ],
-        detailedSpecs: [
-            { capacitance: '15.00', tolerance: '±5%', dimensions: '40 × 71', application: '1/2 HP Monoblock Pump' },
-            { capacitance: '20.00', tolerance: '±5%', dimensions: '40 × 95', application: '1.5 HP Monoblock Pump' },
-            { capacitance: '25.00', tolerance: '±5%', dimensions: '45 × 95', application: '1 HP Jet Pump & 1 Ton AC Unit' },
-            { capacitance: '36.00', tolerance: '±5%', dimensions: '50 × 120', application: '1.5 Ton AC Unit' },
-            { capacitance: '45.00', tolerance: '±5%', dimensions: '50 × 120', application: '2 Ton AC Unit' },
-            { capacitance: '50.00', tolerance: '±5%', dimensions: '50 × 120', application: 'Heavy Duty Motors' },
         ]
     },
     {
@@ -175,8 +106,8 @@ export const PRODUCTS = [
         ],
         specs: [
             { label: 'Standard', value: 'IS 1709:1984' },
+            { label: 'Capacitance', value: '1.25 - 4.00 µF' },
             { label: 'Rated Voltage', value: '440 VAC' },
-            { label: 'Tolerance', value: '±5%' },
             { label: 'Duty Cycle', value: 'Continuous' },
         ],
         detailedSpecs: [
@@ -191,5 +122,75 @@ export const PRODUCTS = [
             { capacitance: '3.50', tolerance: '±5%', dimensions: '30 × 52' },
             { capacitance: '4.00', tolerance: '±5%', dimensions: '30 × 52' },
         ]
-    }
+    },
+    {
+        id: 'motor-run-capacitor',
+        name: 'Motor Run Capacitor',
+        category: 'Motor Run',
+        standard: 'As per IS 2993 : 1998',
+        description: 'Heavy-duty motor run capacitors for single-phase AC motors in pumps, compressors, and industrial machinery. Engineered for continuous duty cycles.',
+        image: MotorRunCapacitorImg,
+        features: [
+            'IS 2993:1998 Standard Compliance',
+            'Tolerance: ±5%',
+            'Heavy-duty Construction',
+            'High Capacitance Range',
+            'Wire Lead & Lug Termination',
+            'UV Resistant Enclosure',
+            'Low ESR for Efficiency',
+            'Continuous Duty Rating'
+        ],
+        specs: [
+            { label: 'Standard', value: 'IS 2993:1998' },
+            { label: 'Capacitance', value: '4.00 - 50.00 µF' },
+            { label: 'Rated Voltage', value: '440 VAC' },
+            { label: 'Operating Temp', value: '-40°C to +85°C' },
+        ],
+        detailedSpecs: [
+            { capacitance: '4.00', tolerance: '±5%', dimensions: '35 × 55', application: 'Coller Motors 0.25 H.P.' },
+            { capacitance: '6.00', tolerance: '±5%', dimensions: '55 × 55', application: 'Coller Motors 0.25 H.P.' },
+            { capacitance: '8.00', tolerance: '±5%', dimensions: '35 × 71', application: 'Cooler Motors 0.50 H.P / Exhaust Fans' },
+            { capacitance: '10.00', tolerance: '±5%', dimensions: '36 × 71', application: '1/2 HP Monoblock & Low head pump' },
+            { capacitance: '12.50', tolerance: '±5%', dimensions: '35 × 71', application: '1/2 HP Self Priming pump' },
+            { capacitance: '15.00', tolerance: '±5%', dimensions: '40 × 71', application: '1/2 HP Monoblock pump' },
+            { capacitance: '20.00', tolerance: '±5%', dimensions: '40 × 95', application: '1.5 HP Monoblock Pump' },
+            { capacitance: '25.00', tolerance: '±5%', dimensions: '45 × 95', application: '1 HP jet pump & 1 Ton AC Unit' },
+            { capacitance: '36.00', tolerance: '±5%', dimensions: '50 × 120', application: '1.5 Ton AC Unit' },
+            { capacitance: '45.00', tolerance: '±5%', dimensions: '50 × 120', application: '2 Ton AC Unit' },
+            { capacitance: '50.00', tolerance: '±5%', dimensions: '50 × 120', application: 'Heavy Duty Motors' },
+        ]
+    },
+    {
+        id: 'air-conditioner-capacitor',
+        name: 'Air Conditioner Capacitor',
+        category: 'Air Conditioner',
+        standard: 'As per IS 2993 : 1998',
+        description: 'High-performance capacitors designed for air conditioning units and heavy-duty motors. Ensures reliable starting and running operation under demanding conditions.',
+        image: AirConditionerCapacitorImg,
+        features: [
+            'IS 2993:1998 Standard Compliance',
+            'Rated Voltage: 440 VAC',
+            'Tolerance: ±5%',
+            'Self-Healing Properties',
+            'Low Dissipation Factor',
+            'Explosion-proof Design',
+            'Wide Temperature Range',
+            'Long Operational Life'
+        ],
+        specs: [
+            { label: 'Standard', value: 'IS 2993:1998' },
+            { label: 'Capacitance', value: '15.00 - 50.00 µF' },
+            { label: 'Rated Voltage', value: '440 VAC' },
+            { label: 'Application', value: 'AC Units, Motors' },
+        ],
+        detailedSpecs: [
+            { capacitance: '15.00', tolerance: '±5%', dimensions: '40 × 71', application: '1/2 HP Monoblock Pump' },
+            { capacitance: '20.00', tolerance: '±5%', dimensions: '40 × 95', application: '1.5 HP Monoblock Pump' },
+            { capacitance: '25.00', tolerance: '±5%', dimensions: '45 × 95', application: '1 HP Jet Pump & 1 Ton AC Unit' },
+            { capacitance: '36.00', tolerance: '±5%', dimensions: '50 × 120', application: '1.5 Ton AC Unit' },
+            { capacitance: '45.00', tolerance: '±5%', dimensions: '50 × 120', application: '2 Ton AC Unit' },
+            { capacitance: '50.00', tolerance: '±5%', dimensions: '50 × 120', application: 'Heavy Duty Motors' },
+        ]
+    },
+
 ];

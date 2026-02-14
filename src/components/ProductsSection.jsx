@@ -104,7 +104,10 @@ const ProductsSection = () => {
 
                                 {/* Mini Spec grid */}
                                 <div className="mt-auto grid grid-cols-2 gap-2">
-                                    {product.specs.slice(1, 3).map((spec, i) => (
+                                    {[
+                                        product.specs.find(s => s.label.includes('Capacitance')),
+                                        product.specs.find(s => s.label === 'Rated Voltage')
+                                    ].filter(Boolean).map((spec, i) => (
                                         <div key={i} className="bg-white/5 rounded px-2 py-1.5 border border-white/5">
                                             <div className="text-[9px] text-text-dim uppercase tracking-wider">{spec.label}</div>
                                             <div className="text-[10px] text-white font-mono truncate">{spec.value}</div>
