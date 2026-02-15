@@ -9,10 +9,10 @@ const Footer = () => {
         {
             title: 'Products',
             links: [
-                { label: 'Fan Capacitor', href: '/product/fan-capacitor' },
-                { label: 'Motor Capacitor', href: '/product/motor-run-capacitor' },
-                { label: 'Lighting Capacitor', href: '/product/lighting-capacitor' },
-                { label: 'Heavy Duty', href: '/product/heavy-duty-capacitor' },
+                { label: 'Fan Capacitors', href: '/product/fan-capacitor' },
+                { label: 'Heavy Duty Capacitors', href: '/product/heavy-duty-capacitor' },
+                { label: 'Motor Run Capacitors', href: '/product/motor-run-capacitor' },
+                { label: 'Air Conditioner Capacitors', href: '/product/air-conditioner-capacitor' },
             ],
         },
         {

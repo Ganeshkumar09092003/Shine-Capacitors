@@ -48,17 +48,17 @@ const ProductPage = ({ product }) => {
 
             <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 {/* Breadcrumb */}
-                <nav className="p-breadcrumb flex items-center gap-3 mb-10 text-sm text-text-secondary font-medium opacity-0">
-                    <button onClick={() => navigate('/')} className="flex items-center gap-1 hover:text-brand-glow-light transition-colors group">
+                <nav className="p-breadcrumb flex items-center gap-2 mb-10 text-sm text-text-secondary font-medium opacity-0">
+                    <button onClick={() => navigate('/')} className="flex items-center gap-1 px-3 py-2 rounded-lg hover:bg-white/5 hover:text-brand-glow-light transition-all group cursor-pointer">
                         <span className="material-symbols-outlined text-lg group-hover:-translate-x-1 transition-transform">arrow_back</span>
                         Back
                     </button>
                     <span className="w-1 h-1 bg-border-subtle rounded-full"></span>
-                    <button onClick={() => { navigate('/'); setTimeout(() => { document.getElementById('products')?.scrollIntoView({ behavior: 'smooth' }); }, 100); }} className="hover:text-brand-glow-light transition-colors">
+                    <button onClick={() => { navigate('/'); setTimeout(() => { document.getElementById('products')?.scrollIntoView({ behavior: 'smooth' }); }, 100); }} className="px-3 py-2 rounded-lg hover:bg-white/5 hover:text-brand-glow-light transition-all cursor-pointer">
                         Products
                     </button>
                     <span className="material-symbols-outlined text-xs text-border-subtle">chevron_right</span>
-                    <span className="text-brand-glow-light font-bold text-glow">{product.name}</span>
+                    <span className="px-3 py-2 text-brand-glow-light font-bold text-glow">{product.name}</span>
                 </nav>
 
                 <section className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 mb-20 items-start">
@@ -71,7 +71,7 @@ const ProductPage = ({ product }) => {
                         </div>
                     </div>
 
-                    <div className="lg:col-span-7 p-hero-content opacity-0 flex flex-col justify-center">
+                    <div className="lg:col-span-7 p-hero-content opacity-0 flex flex-col justify-center items-center lg:items-start text-center lg:text-left">
                         <div className="mb-2">
                             <div className="inline-flex flex-wrap items-center gap-3 mb-6">
                                 <span className="inline-flex items-center gap-1.5 px-3 py-1 bg-brand-deep/20 border border-brand-deep/40 rounded-full text-xs font-bold text-brand-glow-light uppercase tracking-wider shadow-[0_0_10px_rgba(158,240,26,0.2)]">
@@ -159,12 +159,13 @@ const ProductPage = ({ product }) => {
                         <h3 className="text-xl font-bold text-white mb-6">Typical Applications</h3>
                         <div className="flex flex-wrap gap-2">
                             {(() => {
-                                const uniqueApps = product.detailedSpecs
-                                    ? Array.from(new Set(product.detailedSpecs.map(s => s.application).filter(Boolean)))
-                                    : [];
+                                const appsToShow = product.applications ||
+                                    (product.detailedSpecs
+                                        ? Array.from(new Set(product.detailedSpecs.map(s => s.application).filter(Boolean)))
+                                        : APPLICATIONS);
 
-                                const appsToShow = uniqueApps.length > 0 ? uniqueApps : APPLICATIONS;
-                                const isDerived = uniqueApps.length > 0;
+                                const isSpecific = !!product.applications;
+                                const isDerived = !isSpecific && product.detailedSpecs;
 
                                 return appsToShow.map((app, index) => (
                                     isDerived ? (

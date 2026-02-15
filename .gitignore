@@ -37,3 +37,7 @@ lerna-debug.log*
 
 # Vite
 *.local
+
+# Tests
+test_output.txt
+src/unit_test/
