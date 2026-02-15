@@ -5,7 +5,7 @@ const ContactSection = () => {
     const contactMethods = [
         {
             icon: 'location_on',
-            title: 'Manufacturing Unit',
+            title: 'Shine Electronics',
             content: COMPANY_INFO.address,
             link: `https://maps.google.com/?q=${encodeURIComponent(COMPANY_INFO.address)}`,
         },
