@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
-const capacitorImage = "https://res.cloudinary.com/duvo27ycs/image/upload/v1770919116/Capacitor_k2mgpe.png";
+const capacitorImage = "https://res.cloudinary.com/duvo27ycs/image/upload/v1771146516/Gemini_Generated_Image_8z430d8z430d8z43_n0uydh.jpg";
 const capacitorVideo = "https://res.cloudinary.com/duvo27ycs/image/upload/v1770919936/ezgif.com-video-to-webp-converter_2_t1fdky.webp";
 
 // CONFIGURATION: strict 3.5-second delay for the reveal
@@ -161,9 +161,9 @@ const HeroSection = ({ startAnimation = false, onReveal }) => {
                 {/* Visual Content (Capacitor) */}
                 <div ref={capacitorRef} className="lg:col-span-5 relative mt-12 lg:mt-0 hidden lg:block">
                     {/* Glass Backing */}
-                    <div className="absolute inset-0 bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl transform rotate-3 scale-95 opacity-50 -z-10"></div>
+                    <div className="absolute inset-0 bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl transform rotate-3 scale-110 opacity-50 -z-10"></div>
 
-                    <div className="relative z-10 p-2">
+                    <div className="relative z-10 p-2 scale-110">
                         <img
                             src={capacitorImage}
                             alt="Industrial Capacitor"

@@ -78,7 +78,7 @@ const ProductPage = ({ product }) => {
                                     <span className="w-1.5 h-1.5 bg-brand-glow-light rounded-full animate-pulse" />
                                     In Stock
                                 </span>
-                                {product.standard && <span className="inline-flex items-center gap-1.5 px-3 py-1 bg-white/5 border border-white/10 rounded-full text-xs font-bold text-text-secondary uppercase tracking-wider"><span className="material-symbols-outlined text-sm">verified</span>IS Certified</span>}
+                                {product.standard && <span className="inline-flex items-center gap-1.5 px-3 py-1 bg-white/5 border border-white/10 rounded-full text-xs font-bold text-text-secondary uppercase tracking-wider"><span className="material-symbols-outlined text-sm">verified</span>IS Standard</span>}
                             </div>
                         </div>
 

@@ -1,8 +1,8 @@
 // Import images for Vite bundling
-const FanCapacitorImg = "https://res.cloudinary.com/duvo27ycs/image/upload/v1770919177/Fan-Capacitor_moc16t.png";
-const MotorRunCapacitorImg = "https://res.cloudinary.com/duvo27ycs/image/upload/v1770919263/Motor-Run-Capacitor_o5wdoc.png";
-const AirConditionerCapacitorImg = "https://res.cloudinary.com/duvo27ycs/image/upload/v1770979041/Gemini_Generated_Image_oxgkwboxgkwboxgk_mj6dud.png";
-const HeavyDutyCapacitorImg = "https://res.cloudinary.com/duvo27ycs/image/upload/v1770919234/Heavy-Duty-Capacitor_od8kdh.png";
+const FanCapacitorImg = "https://res.cloudinary.com/duvo27ycs/image/upload/v1771144628/Fan_Capacitor_1_oxnxpa.png";
+const MotorRunCapacitorImg = "https://res.cloudinary.com/duvo27ycs/image/upload/v1771144625/Motor_run_nnvso0.png";
+const AirConditionerCapacitorImg = "https://res.cloudinary.com/duvo27ycs/image/upload/v1771144626/Air_Conditioner_Capacior_gxg6p6.png";
+const HeavyDutyCapacitorImg = "https://res.cloudinary.com/duvo27ycs/image/upload/v1771144626/Heavy_duty_Cap_efyah0.png";
 
 export const COMPANY_INFO = {
     name: 'Shine Capacitors',
